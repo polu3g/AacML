@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "6adb8e16-23ad-47bb-ae3f-006a8d1f335d",
+		"name": "AI Tensorflow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "697427",
+		"_collection_link": "https://interstellar-crater-311408.postman.co/workspace/ii~fa61da79-8652-4c82-b799-f7db79fd1d0a/collection/697427-6adb8e16-23ad-47bb-ae3f-006a8d1f335d?action=share&source=collection_link&creator=697427"
+	},
+	"item": [
+		{
+			"name": "Predict set 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"City\": \"San Francisco, USA\",\r\n  \"Season\": \"Autumn (Fall)\",\r\n  \"Month\": \"October\",\r\n  \"Promotions\": \"Exclusive Member Sales\",\r\n  \"Offers\": \"Percentage Discount\",\r\n  \"ShippingOptions\": \"Flat-Rate Shipping\",\r\n  \"LocalFestivals\": \"Día de los Muertos (Mexico)\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict set 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"City\": \"New York City, USA\",\r\n  \"Season\": \"Winter\",\r\n  \"Month\": \"January\",\r\n  \"Promotions\": \"Percentage Off (e.g., 20% off)\",\r\n  \"Offers\": \"Percentage Discount\",\r\n  \"ShippingOptions\": \"Standard Shipping\",\r\n  \"LocalFestivals\": \"New Year's Day (Global)\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict II Savings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"model_name\": \"HP Color LaserJet Pro MFP M183fw Printer\",\r\n        \"cartridge_name\": \"HP 215A Cyan LaserJet Toner Cartridge\",\r\n        \"daily_usage\": \"500\"\r\n    },\r\n    {\r\n        \"model_name\": \"HP OfficeJet Pro 9025e Printer\",\r\n        \"cartridge_name\": \"HP 962XL Black Ink Cartridge\",\r\n        \"daily_usage\": \"300\"\r\n    },\r\n    {\r\n        \"model_name\": \"HP LaserJet Pro MFP M428fdw Printer\",\r\n        \"cartridge_name\": \"HP 58A Black Original LaserJet Toner Cartridge\",\r\n        \"daily_usage\": \"700\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict/savings",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict",
+						"savings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LLM",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/answer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"answer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predict-cc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callcenter.hp-instantink.com/mock/predict",
+					"protocol": "https",
+					"host": [
+						"callcenter",
+						"hp-instantink",
+						"com"
+					],
+					"path": [
+						"mock",
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AacML",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<AACML>\r\n    <Agent id=\"A2\" role=\"explorer\">\r\n        <State>\r\n            <Energy level=\"85\" />\r\n        </State>\r\n        <Action type=\"jump\">\r\n            <Height value=\"2m\" />\r\n        </Action>\r\n        <Reward type=\"positive\" value=\"15\" reason=\"successful exploration\" />\r\n    </Agent>\r\n\r\n    <Agent id=\"A3\" role=\"worker\">\r\n        <State>\r\n            <Task status=\"failed\" />\r\n        </State>\r\n        <Action type=\"build\">\r\n            <Material type=\"wood\" quantity=\"5\" />\r\n        </Action>\r\n        <Reward type=\"negative\" value=\"-5\" reason=\"structural instability\" />\r\n    </Agent>\r\n</AACML>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/intercept",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"intercept"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
